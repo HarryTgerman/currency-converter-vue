@@ -1,0 +1,12 @@
+@font-face {
+  font-family: "Inter";
+  src: local("Inter"), url(../font/Inter-Regular-slnt=0.ttf) format("truetype");
+}
+
+$main-font: Inter, sans-serif;
+$main-text-color: #282c47;
+$primary-color: rgb(88 108 246);
+$primary-color-opacity: rgba(88, 108, 246, 0.2);
+$light-grey: rgba(211, 211, 211, 0.4);
+$grey: rgb(180, 180, 180);
+$light-blue: rgb(233, 237, 245);

@@ -1,0 +1,23 @@
+//fonts
+#app {
+  font-family: $main-font;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  color: $main-text-color;
+  .currency-converter-container {
+    max-width: 980px;
+    width: 100%;
+    padding: 25px;
+    .currency-picker-container {
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

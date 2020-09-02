@@ -1,0 +1,31 @@
+.switch-button-container {
+  height: 80px;
+  width: 80px;
+  position: absolute;
+  margin: 100px auto;
+  align-items: center;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  box-shadow: -2px 2px 5px 0.5px $grey;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.8;
+  }
+  .switch-button-inner {
+    height: 60px;
+    width: 60px;
+    margin: auto;
+    align-items: center;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $primary-color;
+    i {
+      color: #fff;
+    }
+  }
+}
