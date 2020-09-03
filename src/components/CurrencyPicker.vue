@@ -1,7 +1,7 @@
 <template>
   <div
     class="currency-picker"
-    v-bind:class="{ 'currency-picker-active': currencyValue === base }"
+    v-bind:class="{ 'currency-picker-active': id === base }"
   >
     <div class="head">
       <select
@@ -19,13 +19,8 @@
         <p class="currency-symbol">{{ symbol }}</p>
         <input type="number" v-model="value" v-on:keyup="handleChagne" />
       </div>
-      <p class="conversion-hint" v-if="currencyValue === base">
-        1 {{ currencyValue }} = {{ (1 / conversionRate).toFixed(5) }}
-        {{ currencyValue2 }}
-      </p>
-      <p class="conversion-hint" v-else>
-        1 {{ currencyValue }} = {{ 1 * conversionRate.toFixed(5) }}
-        {{ currencyValue2 }}
+      <p class="conversion-hint">
+        {{ subline }}
       </p>
     </div>
   </div>
@@ -42,9 +37,8 @@ export default {
     handleSelectChange: Function,
     id: String,
     currencyValue: String,
-    currencyValue2: String,
     currencyOptions: Array,
-    conversionRate: Number,
+    subline: String,
   },
   data() {
     return {
