@@ -143,6 +143,16 @@ export default {
     },
     async switchBase() {
       let res;
+      let dataInstance = {
+        fromAmount: this.fromAmount,
+        toAmount: this.toAmount,
+        fromCurrency: this.fromCurrency,
+        toCurrency: this.toCurrency,
+      };
+      this.fromAmount = dataInstance.toAmount;
+      this.toAmount = dataInstance.fromAmount;
+      this.fromCurrency = dataInstance.toCurrency;
+      this.toCurrency = dataInstance.fromCurrency;
       if (this.base === "from") {
         res = await axios.get(
           `${BASE_URL}?base=${this.toCurrency}&symbols=${this.fromCurrency}`
