@@ -3,7 +3,7 @@
     <div class="currency-converter-container">
       <div class="currency-picker-container">
         <CurrenyPicker
-          :base="base"
+          :active="base === 'from'"
           :amount="fromAmount"
           :subline="sublineFrom"
           :id="'from'"
@@ -13,7 +13,7 @@
           :handleSelectChange="handleSelectChange"
         />
         <CurrenyPicker
-          :base="base"
+          :active="base === 'to'"
           :amount="toAmount"
           :id="'to'"
           :currencyOptions="currencyOptions"

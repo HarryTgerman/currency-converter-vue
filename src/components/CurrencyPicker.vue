@@ -1,7 +1,7 @@
 <template>
   <div
     class="currency-picker"
-    v-bind:class="{ 'currency-picker-active': id === base }"
+    v-bind:class="{ 'currency-picker-active': active }"
   >
     <div class="head">
       <select
@@ -31,7 +31,7 @@ import symbols from "../Common-Currency";
 
 export default {
   props: {
-    base: String,
+    active: Boolean,
     amount: Number,
     handleInputChange: Function,
     handleSelectChange: Function,
